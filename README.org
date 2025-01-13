@@ -3,6 +3,8 @@
 
 Simple calculator written in C.
 
+#+html: <img src="https://github.com/gs-101/c-alculator/blob/screenshots/main.png" align="center" width="50%">
+
 * Acknowledgements
 
 The workings of this program are largely based on "A Beginners’ Guide Away from Scanf()"[fn:1], Esshader[fn:2] and "My Favorite C Compiler Flags during Development"[fn:3].
