@@ -1,0 +1,20 @@
+#+title: C-alculator
+#+options: f:t
+
+Simple calculator written in C.
+
+* Acknowledgements
+
+The workings of this program are largely based on "A Beginners’ Guide Away from Scanf()"[fn:1], Esshader[fn:2] and "My Favorite C Compiler Flags during Development"[fn:3].
+
+Esshader is licensed MIT/Expat, which is [[https://www.gnu.org/licenses/license-list.en.html#Expat][compatible with the GPL]].
+
+Therefore, this program is allowed to use a modified copy of its makefile.
+
+* References
+
+[fn:1] Palmen, F. (2017) A beginners’ guide away from scanf(). sekrit.de. Available at: https://sekrit.de/webdocs/c/beginners-guide-away-from-scanf.html (Accessed: December 30, 2024).
+
+[fn:2] McFee, C. (2024) “Chrismcfee/esshader.” Available at: https://github.com/chrismcfee/esshader (Accessed: December 10, 2024).
+
+[fn:3] Wellons, C. (2023) My favorite c compiler flags during development. null program. Available at: https://nullprogram.com/blog/2023/04/29/ (Accessed: January 6, 2025).
