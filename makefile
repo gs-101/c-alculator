@@ -30,10 +30,14 @@ OBJ = ${SRC:.c=.o}
 
 all: options c-alculator
 
+.PHONY: all
+
 options:
 	@echo c-alculator build options:
 	@echo "CFLAGS = ${CFLAGS}"
 	@echo "CC     = ${CC}"
+
+.PHONY: options
 
 .c.o:
 	@echo CC $<
@@ -49,6 +53,8 @@ clean:
 	@echo Cleaning...
 	@rm -f c-alculator ${OBJ} c-alculator-${VERSION}.tar.gz
 
+.PHONY: clean
+
 dist: clean
 	@echo Creating dist tarball...
 	@mkdir -p c-alculator-${VERSION}
@@ -57,12 +63,15 @@ dist: clean
 	@gzip c-alculator-${VERSION}.tar
 	@rm -rf c-alculator-${VERSION}
 
+.PHONY: dist
 install: all
 	@echo Installing executable to ${DESTDIR}${PREFIX}/bin...
 	@mkdir -p ${DESTDIR}${PREFIX}/bin
 	@cp -f c-alculator ${DESTDIR}${PREFIX}/bin
 	@chmod 755 ${DESTDIR}${PREFIX}/bin/c-alculator
 	@chmod u+s ${DESTDIR}${PREFIX}/bin/c-alculator
+
+.PHONY: install
 
 test: all
 	@echo Running executable for testing...
@@ -74,8 +83,10 @@ test: all
 	@echo Cleaning up after test...
 	@rm -rf ${PWD}/test
 
+.PHONY: test
+
 uninstall:
 	@echo Removing executable from ${DESTDIR}${PREFIX}/bin...
 	@rm -f ${DESTDIR}${PREFIX}/bin/c-alculator
 
-.PHONY: all options clean dist install test uninstall
+.PHONY: uninstall
