@@ -29,7 +29,7 @@ Code:
 
 #define NO_INPUT !fgets(buf, sizeof(buf), stdin)
 
-#define INTRO " ______ \n/ ____|\n| |     \n| |     \n| |____ \n\\_____| alculator\n\n[c]alculate [q]uit\n"
+#define MAIN_MENU " ______ \n/ ____|\n| |     \n| |     \n| |____ \n\\_____| alculator\n\n[c]alculate [q]uit\n"
 
 #define OPERATION_MENU                                                                                                 \
     " \

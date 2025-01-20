@@ -44,7 +44,7 @@ int main_menu(void)
 
     while (1)
     {
-        printf(INTRO);
+        printf(MAIN_MENU);
 
         if (NO_INPUT)
         {
