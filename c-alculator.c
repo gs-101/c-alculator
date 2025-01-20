@@ -100,6 +100,9 @@ int operation(void)
         case 4:
             division();
             return SUCCESS;
+        case 5:
+            power();
+            return SUCCESS;
         default:
             printf("Input should be in the range of the provided operations.\n");
         }
@@ -139,5 +142,34 @@ int division(void)
     GET_NUMBERS;
 
     printf("The result of the operation is: %lf.\n", x / y);
+    return SUCCESS;
+}
+
+double pow(double x, double y)
+{
+    double result = 1;
+
+    if (y == 1)
+    {
+        return x;
+    }
+    else
+    {
+
+        while (y >= 1)
+        {
+            y--;
+            result *= x;
+        }
+
+        return result;
+    }
+}
+
+int power(void)
+{
+    GET_NUMBERS;
+
+    printf("The result of the operation is %lf.\n", pow(x, y));
     return SUCCESS;
 }
