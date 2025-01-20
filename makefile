@@ -46,6 +46,8 @@ test: all
 	@chmod 755 ${PWD}/test/c-alculator
 	@chmod u+s ${PWD}/test/c-alculator
 	@${PWD}/test/c-alculator
+	@echo Cleaning up after test...
+	@rm -rf ${PWD}/test
 
 uninstall:
 	@echo Removing executable from ${DESTDIR}${PREFIX}/bin...
