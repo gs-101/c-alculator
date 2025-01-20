@@ -42,7 +42,7 @@ install: all
 test: all
 	@echo Running executable for testing...
 	@mkdir -p ${PWD}/test
-	@cp -f c-alculator ${PWD}/test
+	@mv c-alculator ${PWD}/test
 	@chmod 755 ${PWD}/test/c-alculator
 	@chmod u+s ${PWD}/test/c-alculator
 	@${PWD}/test/c-alculator
