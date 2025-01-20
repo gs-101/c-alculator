@@ -48,7 +48,7 @@ int main_menu(void)
 
         if (NO_INPUT)
         {
-            return FAILURE;
+            return EXIT_FAILURE;
         }
 
         input = buf[0];
@@ -56,19 +56,19 @@ int main_menu(void)
         if (input == 'c')
         {
             operation();
-            return SUCCESS;
+            return EXIT_SUCCESS;
         }
         else if (input == 'q')
         {
             printf("Quitting...");
-            return FAILURE;
+            return EXIT_SUCCESS;
         }
         else
         {
             printf("Input should either be 'c' or 'q'.\n");
         }
     }
-    return SUCCESS;
+    return EXIT_SUCCESS;
 }
 
 int operation(void)
@@ -82,7 +82,7 @@ int operation(void)
         printf(OPERATION_MENU);
 
         if (NO_INPUT)
-            return FAILURE;
+            return EXIT_FAILURE;
 
         op = strtol(buf, &endptr, 10);
 
@@ -90,27 +90,27 @@ int operation(void)
         {
         case 1:
             addition();
-            return SUCCESS;
+            return EXIT_SUCCESS;
         case 2:
             subtraction();
-            return SUCCESS;
+            return EXIT_SUCCESS;
         case 3:
             multiplication();
-            return SUCCESS;
+            return EXIT_SUCCESS;
         case 4:
             division();
-            return SUCCESS;
+            return EXIT_SUCCESS;
         case 5:
             power();
-            return SUCCESS;
+            return EXIT_SUCCESS;
         case 6:
             factorial();
-            return SUCCESS;
+            return EXIT_SUCCESS;
         default:
             printf("Input should be in the range of the provided operations.\n");
         }
     }
-    return SUCCESS;
+    return EXIT_SUCCESS;
 }
 
 int addition(void)
@@ -119,7 +119,7 @@ int addition(void)
 
     printf("The result is: %lf.\n", x + y);
     printf(QUIT_OPERATION);
-    return SUCCESS;
+    return EXIT_SUCCESS;
 }
 
 int subtraction(void)
@@ -128,7 +128,7 @@ int subtraction(void)
 
     printf("The result of the operations is: %lf.\n", x - y);
     printf(QUIT_OPERATION);
-    return SUCCESS;
+    return EXIT_SUCCESS;
 }
 
 int multiplication(void)
@@ -137,7 +137,7 @@ int multiplication(void)
 
     printf("The result of the operation is: %lf.\n", x * y);
     printf(QUIT_OPERATION);
-    return SUCCESS;
+    return EXIT_SUCCESS;
 }
 
 int division(void)
@@ -145,7 +145,7 @@ int division(void)
     GET_NUMBERS;
 
     printf("The result of the operation is: %lf.\n", x / y);
-    return SUCCESS;
+    return EXIT_SUCCESS;
 }
 
 double pow(double x, double y)
@@ -174,7 +174,7 @@ int power(void)
     GET_NUMBERS;
 
     printf("The result of the operation is %lf.\n", pow(x, y));
-    return SUCCESS;
+    return EXIT_SUCCESS;
 }
 
 double factor(double x)
@@ -194,5 +194,5 @@ int factorial(void)
 
     printf("The result of the operation is %lf.\n", (factor(x)));
     printf(QUIT_OPERATION);
-    return SUCCESS;
+    return EXIT_SUCCESS;
 }

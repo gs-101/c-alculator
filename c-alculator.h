@@ -41,7 +41,7 @@ Code:
     char buf[1024], *endptr;                                                                                           \
     printf("Enter your number:\n");                                                                                    \
     if (NO_INPUT)                                                                                                      \
-        return FAILURE;                                                                                                \
+        return EXIT_FAILURE;                                                                                           \
     else                                                                                                               \
         x = strtod(buf, &endptr);
 
@@ -50,12 +50,12 @@ Code:
     char buf[1024], *endptr;                                                                                           \
     printf("Enter the first number:\n");                                                                               \
     if (NO_INPUT)                                                                                                      \
-        return FAILURE;                                                                                                \
+        return EXIT_FAILURE;                                                                                           \
     else                                                                                                               \
         x = strtod(buf, &endptr);                                                                                      \
     printf("Enter the second number:\n");                                                                              \
     if (NO_INPUT)                                                                                                      \
-        return FAILURE;                                                                                                \
+        return EXIT_FAILURE;                                                                                           \
     else                                                                                                               \
         y = strtod(buf, &endptr);
 
@@ -79,5 +79,5 @@ extern double factor(double x);
 
 extern int factorial(void);
 
-#define SUCCESS 0
-#define FAILURE -1
+#define EXIT_SUCCESS 0
+#define EXIT_FAILURE -1
