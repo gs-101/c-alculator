@@ -31,7 +31,8 @@ Code:
 
 #define INTRO " ______ \n/ ____|\n| |     \n| |     \n| |____ \n\\_____| alculator\n\n[c]alculate [q]uit\n"
 
-#define OPERATION_MENU "Operations:\n[1] Addition\n[2] Subtraction\n[3] Multiplication\n[4] Division\n[5] Power\n"
+#define OPERATION_MENU                                                                                                 \
+    "Operations:\n[1] Addition\n[2] Subtraction\n[3] Multiplication\n[4] Division\n[5] Power\n[6] Factorial\n"
 
 #define QUIT_OPERATION "Pleasure doing calculations for you!\n"
 
@@ -73,5 +74,10 @@ extern int division(void);
 extern double pow(double x, double y);
 
 extern int power(void);
+
+extern double factor(double x);
+
+extern int factorial(void);
+
 #define SUCCESS 0
 #define FAILURE -1

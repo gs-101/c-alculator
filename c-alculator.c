@@ -103,6 +103,9 @@ int operation(void)
         case 5:
             power();
             return SUCCESS;
+        case 6:
+            factorial();
+            return SUCCESS;
         default:
             printf("Input should be in the range of the provided operations.\n");
         }
@@ -171,5 +174,25 @@ int power(void)
     GET_NUMBERS;
 
     printf("The result of the operation is %lf.\n", pow(x, y));
+    return SUCCESS;
+}
+
+double factor(double x)
+{
+    double result = 1;
+    for (double i = 1; i <= x; i++)
+    {
+        result *= i;
+    }
+
+    return result;
+}
+
+int factorial(void)
+{
+    GET_NUMBER;
+
+    printf("The result of the operation is %lf.\n", (factor(x)));
+    printf(QUIT_OPERATION);
     return SUCCESS;
 }
