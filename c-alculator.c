@@ -39,7 +39,8 @@ int main(void)
 int main_menu(void)
 {
     char input;
-    char buf[256], *endptr;
+    // Shortest value allowed for buffer.
+    char buf[3], *endptr;
 
     while (1)
     {
@@ -73,7 +74,8 @@ int main_menu(void)
 int operation(void)
 {
     int op, success;
-    char buf[256], *endptr;
+    // Shortest value allowed for buffer.
+    char buf[3], *endptr;
 
     while (1)
     {
