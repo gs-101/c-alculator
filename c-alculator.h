@@ -32,9 +32,15 @@ Code:
 #define INTRO " ______ \n/ ____|\n| |     \n| |     \n| |____ \n\\_____| alculator\n\n[c]alculate [q]uit\n"
 
 #define OPERATION_MENU                                                                                                 \
-    "Operations:\n[1] Addition\n[2] Subtraction\n[3] Multiplication\n[4] Division\n[5] Power\n[6] Factorial\n"
-
-#define QUIT_OPERATION "Pleasure doing calculations for you!\n"
+    " \
+Operations:\n \
+[1] Addition\n \
+[2] Subtraction\n \
+[3] Multiplication\n \
+[4] Division\n \
+[5] Power\n \
+[6] Factorial\n \
+"
 
 #define GET_NUMBER                                                                                                     \
     double x;                                                                                                          \
