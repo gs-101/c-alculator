@@ -1,5 +1,7 @@
 # c-alculator - Simple calculator using C.
 
+include config.mk
+
 SRC = c-alculator.c
 OBJ = ${SRC:.c=.o}
 
