@@ -27,6 +27,9 @@ Commentary:
 Code:
  */
 
+#define EXIT_SUCCESS 0
+#define EXIT_FAILURE -1
+
 #define NO_INPUT !fgets(buf, sizeof(buf), stdin)
 
 #define MAIN_MENU " ______ \n/ ____|\n| |     \n| |     \n| |____ \n\\_____| alculator\n\n[c]alculate [q]uit\n"
@@ -65,6 +68,8 @@ Operations:\n \
     else                                                                                                               \
         y = strtod(buf, &endptr);
 
+#define QUIT_OPERATION "Pleasure doing calculations for you!\n"
+
 extern int main_menu(void);
 
 extern int operation(void);
@@ -84,6 +89,3 @@ extern int power(void);
 extern double factor(double x);
 
 extern int factorial(void);
-
-#define EXIT_SUCCESS 0
-#define EXIT_FAILURE -1
