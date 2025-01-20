@@ -36,18 +36,18 @@ Code:
 #define QUIT_OPERATION "Pleasure doing calculations for you!"
 
 #define GET_NUMBERS                                                                                                    \
-    int x, y;                                                                                                          \
+    double x, y;                                                                                                       \
     char buf[1024], *endptr;                                                                                           \
     printf("Enter the first number:\n");                                                                               \
     if (NO_INPUT)                                                                                                      \
         return FAILURE;                                                                                                \
     else                                                                                                               \
-        x = strtol(buf, &endptr, 10);                                                                                  \
+        x = strtod(buf, &endptr);                                                                                      \
     printf("Enter the second number:\n");                                                                              \
     if (NO_INPUT)                                                                                                      \
         return FAILURE;                                                                                                \
     else                                                                                                               \
-        y = strtol(buf, &endptr, 10);
+        y = strtod(buf, &endptr);
 
 extern int main_menu(void);
 

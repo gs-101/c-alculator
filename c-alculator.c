@@ -109,7 +109,7 @@ int addition(void)
 {
     GET_NUMBERS;
 
-    printf("The result is: %d.\n", x + y);
+    printf("The result is: %lf.\n", x + y);
     printf(QUIT_OPERATION);
     return SUCCESS;
 }
@@ -118,7 +118,7 @@ int subtraction(void)
 {
     GET_NUMBERS;
 
-    printf("The result of the operations is: %d.\n", x - y);
+    printf("The result of the operations is: %lf.\n", x - y);
     printf(QUIT_OPERATION);
     return SUCCESS;
 }
@@ -127,7 +127,7 @@ int multiplication(void)
 {
     GET_NUMBERS;
 
-    printf("The result of the operation is: %d.\n", x * y);
+    printf("The result of the operation is: %lf.\n", x * y);
     printf(QUIT_OPERATION);
     return SUCCESS;
 }
@@ -136,6 +136,6 @@ int division(void)
 {
     GET_NUMBERS;
 
-    printf("The result of the operation is: %d.\n", x / y);
+    printf("The result of the operation is: %lf.\n", x / y);
     return SUCCESS;
 }
