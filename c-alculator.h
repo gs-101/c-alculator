@@ -33,7 +33,7 @@ Code:
 
 #define OPERATION_MENU "Operations:\n[1] Addition\n[2] Subtraction\n[3] Multiplication\n[4] Division\n"
 
-#define QUIT_OPERATION "Pleasure doing calculations for you!"
+#define QUIT_OPERATION "Pleasure doing calculations for you!\n"
 
 #define GET_NUMBERS                                                                                                    \
     double x, y;                                                                                                       \
