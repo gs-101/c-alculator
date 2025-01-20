@@ -35,6 +35,15 @@ Code:
 
 #define QUIT_OPERATION "Pleasure doing calculations for you!\n"
 
+#define GET_NUMBER                                                                                                     \
+    double x;                                                                                                          \
+    char buf[1024], *endptr;                                                                                           \
+    printf("Enter your number:\n");                                                                                    \
+    if (NO_INPUT)                                                                                                      \
+        return FAILURE;                                                                                                \
+    else                                                                                                               \
+        x = strtod(buf, &endptr);
+
 #define GET_NUMBERS                                                                                                    \
     double x, y;                                                                                                       \
     char buf[1024], *endptr;                                                                                           \
