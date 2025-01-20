@@ -64,6 +64,14 @@ dist: clean
 	@rm -rf c-alculator-${VERSION}
 
 .PHONY: dist
+
+docs:
+	@echo Updating documentation...
+	@doxygen -g
+	@doxygen
+
+.PHONY: docs
+
 install: all
 	@echo Installing executable to ${DESTDIR}${PREFIX}/bin...
 	@mkdir -p ${DESTDIR}${PREFIX}/bin

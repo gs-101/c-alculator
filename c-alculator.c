@@ -1,4 +1,6 @@
 /* c-alculator --- Simple calculator using C
+   @file c-alculator.c
+   @brief Simple calculator using C.
 
 Copyright (C) 2025 Gabriel Santos
 
@@ -31,6 +33,11 @@ Code:
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * @brief Runs the main program
+ *
+ * @return EXIT_SUCCESS on no failues, EXIT_FAIL otherwise.
+ */
 int main(void)
 {
     main_menu();
