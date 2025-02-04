@@ -3,7 +3,8 @@
 
 Simple calculator written in C.
 
-#+html: <img src="https://github.com/gs-101/c-alculator/blob/screenshots/main.png" align="center" width="50%">
+#+html: <img src="https://vhs.charm.sh/vhs-4GF0TTvNSphwc17HPpDG4p.gif" alt="A GIF showing how the programs works. A user does a simple addition of 1 + 1.">
+#+html: <a href="https://vhs.charm.sh"> <img src="https://stuff.charm.sh/vhs/badge.svg"></a>
 
 * Acknowledgements
 
