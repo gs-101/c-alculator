@@ -51,7 +51,7 @@ c-alculator: ${OBJ}
 
 clean:
 	@echo Cleaning...
-	@rm -f c-alculator ${OBJ} c-alculator-${VERSION}.tar.gz
+	@rm -f c-alculator.o ${OBJ} c-alculator-${VERSION}.tar.gz
 
 .PHONY: clean
 
