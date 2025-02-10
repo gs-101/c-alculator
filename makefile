@@ -28,9 +28,11 @@ include config.mk
 SRC = c-alculator.c
 OBJ = ${SRC:.c=.o}
 
-all: options c-alculator
+.c.o:
+	@echo CC $<
+	@${CC} -c ${CFLAGS} $<
 
-.PHONY: all
+${OBJ}: config.mk
 
 options:
 	@echo c-alculator build options:
@@ -39,15 +41,13 @@ options:
 
 .PHONY: options
 
-.c.o:
-	@echo CC $<
-	@${CC} -c ${CFLAGS} $<
-
-${OBJ}: config.mk
-
 c-alculator: ${OBJ}
 	@echo CC -o $@
 	@${CC} -o $@ ${OBJ} ${CFLAGS}
+
+all: options c-alculator
+
+.PHONY: all
 
 clean:
 	@echo Cleaning...
