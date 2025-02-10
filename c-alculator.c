@@ -181,6 +181,7 @@ int power(void)
     GET_NUMBERS;
 
     printf("The result of the operation is %lf.\n", pow(x, y));
+    printf(QUIT_OPERATION);
     return EXIT_SUCCESS;
 }
 
