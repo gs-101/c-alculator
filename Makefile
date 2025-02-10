@@ -58,7 +58,7 @@ clean:
 dist: clean
 	@echo Creating dist tarball...
 	@mkdir -p c-alculator-${VERSION}
-	@cp -R LICENSE makefile README.org config.mk ${SRC} c-alculator-${VERSION}
+	@cp -R LICENSE c-alculator-${VERSION}
 	@tar -cf c-alculator-${VERSION}.tar c-alculator-${VERSION}
 	@gzip c-alculator-${VERSION}.tar
 	@rm -rf c-alculator-${VERSION}
