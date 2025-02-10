@@ -91,6 +91,8 @@ int operation(void)
         if (NO_INPUT)
             return EXIT_FAILURE;
 
+        // There's no strtoi. On older systems, long is the same as int,
+        // so this doesn't take a lot of memory.
         op = strtol(buf, &endptr, 10);
 
         switch (op)
