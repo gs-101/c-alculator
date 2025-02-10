@@ -29,13 +29,9 @@ Commentary:
 Code:
  */
 
+#include <stdio.h>
 #define EXIT_SUCCESS 0
 #define EXIT_FAILURE -1
-
-/**
- * @brief Checks if input from stdin cannot be read into the buffer.
- */
-#define NO_INPUT !fgets(buf, sizeof(buf), stdin)
 
 #define MAIN_MENU " ______ \n/ ____|\n| |     \n| |     \n| |____ \n\\_____| alculator\n\n[c]alculate [q]uit\n"
 
@@ -49,6 +45,13 @@ Operations:\n \
 [5] Power\n \
 [6] Factorial\n \
 "
+
+#define ERROR_ON_NO_INPUT                                                                                              \
+    if (!fgets(buf, sizeof(buf), stdin))                                                                               \
+    {                                                                                                                  \
+        perror("Error on getting input");                                                                              \
+        exit(EXIT_FAILURE);                                                                                            \
+    }
 
 /**
  * @brief Macro to prompt the user to enter a number and parse it as a double.
@@ -66,10 +69,9 @@ Operations:\n \
     double x;                                                                                                          \
     char buf[1024], *endptr;                                                                                           \
     printf("Enter your number:\n");                                                                                    \
-    if (NO_INPUT)                                                                                                      \
-        return EXIT_FAILURE;                                                                                           \
-    else                                                                                                               \
-        x = strtod(buf, &endptr);
+    ERROR_ON_NO_INPUT                                                                                                  \
+                                                                                                                       \
+    else x = strtod(buf, &endptr);
 
 /**
  * @brief Macro to prompt the user to enter two numbers, parsing them as doubles.
@@ -87,15 +89,14 @@ Operations:\n \
     double x, y;                                                                                                       \
     char buf[1024], *endptr;                                                                                           \
     printf("Enter the first number:\n");                                                                               \
-    if (NO_INPUT)                                                                                                      \
-        return EXIT_FAILURE;                                                                                           \
-    else                                                                                                               \
-        x = strtod(buf, &endptr);                                                                                      \
+                                                                                                                       \
+    ERROR_ON_NO_INPUT                                                                                                  \
+                                                                                                                       \
+    else x = strtod(buf, &endptr);                                                                                     \
     printf("Enter the second number:\n");                                                                              \
-    if (NO_INPUT)                                                                                                      \
-        return EXIT_FAILURE;                                                                                           \
-    else                                                                                                               \
-        y = strtod(buf, &endptr);
+                                                                                                                       \
+    ERROR_ON_NO_INPUT                                                                                                  \
+    else y = strtod(buf, &endptr);
 
 #define QUIT_OPERATION "Pleasure doing calculations for you!\n"
 

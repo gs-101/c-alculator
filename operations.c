@@ -8,7 +8,7 @@ int addition(void)
 
     printf("The result is: %lf.\n", x + y);
     printf(QUIT_OPERATION);
-    return EXIT_SUCCESS;
+    exit(EXIT_SUCCESS);
 }
 
 int subtraction(void)
@@ -17,7 +17,7 @@ int subtraction(void)
 
     printf("The result of the operations is: %lf.\n", x - y);
     printf(QUIT_OPERATION);
-    return EXIT_SUCCESS;
+    exit(EXIT_SUCCESS);
 }
 
 int multiplication(void)
@@ -26,7 +26,7 @@ int multiplication(void)
 
     printf("The result of the operation is: %lf.\n", x * y);
     printf(QUIT_OPERATION);
-    return EXIT_SUCCESS;
+    exit(EXIT_SUCCESS);
 }
 
 int division(void)
@@ -35,12 +35,13 @@ int division(void)
 
     if (y == 0)
     {
-        printf("Can't divide by zero.\n");
-        return EXIT_FAILURE;
+        fprintf(stderr, "Can't divide by zero.\n");
+        exit(EXIT_FAILURE);
     }
 
     printf("The result of the operation is: %lf.\n", x / y);
-    return EXIT_SUCCESS;
+    printf(QUIT_OPERATION);
+    exit(EXIT_SUCCESS);
 }
 
 double pow(double x, double y)
@@ -70,7 +71,7 @@ int power(void)
 
     printf("The result of the operation is %lf.\n", pow(x, y));
     printf(QUIT_OPERATION);
-    return EXIT_SUCCESS;
+    exit(EXIT_SUCCESS);
 }
 
 double factor(double x)
@@ -90,5 +91,5 @@ int factorial(void)
 
     printf("The result of the operation is %lf.\n", (factor(x)));
     printf(QUIT_OPERATION);
-    return EXIT_SUCCESS;
+    exit(EXIT_SUCCESS);
 }

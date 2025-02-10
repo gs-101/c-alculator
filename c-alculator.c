@@ -54,10 +54,7 @@ int main_menu(void)
     {
         printf(MAIN_MENU);
 
-        if (NO_INPUT)
-        {
-            return EXIT_FAILURE;
-        }
+        ERROR_ON_NO_INPUT
 
         input = buf[0];
 
@@ -89,8 +86,7 @@ int operation(void)
     {
         printf(OPERATION_MENU);
 
-        if (NO_INPUT)
-            return EXIT_FAILURE;
+        ERROR_ON_NO_INPUT
 
         // There's no strtoi. On older systems, long is the same as int,
         // so this doesn't take a lot of memory.
