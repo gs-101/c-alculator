@@ -1,3 +1,34 @@
+/* c-alculator --- Simple calculator using C
+   @file operations.c
+   @brief Definition of the operations for c-alculator.
+
+Copyright (C) 2025 Gabriel Santos
+
+Author: Gabriel Santos
+URL: https://github.com/gs-101/c-alculator
+Mirror: https://codeberg.org/gs-101/c-alculator
+SPDX-License-Identifier: GPL-3.0-or-later
+
+ This file is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published
+ by the Free Software Foundation, either version 3 of the License
+ (at your option) any later version.
+
+ This file is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this file.  If not, see <https://www.gnu.org/licenses/>.
+
+Commentary:
+
+ File holding all the operations suppored by c-alculator.
+
+Code:
+ */
+
 #include "c-alculator.h"
 #include <stdio.h>
 #include <stdlib.h>
